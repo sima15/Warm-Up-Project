@@ -1,10 +1,15 @@
 import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 
 
 public class DriverServer {
 	public static void main(String[] args) throws IOException
-	{
-		UDPServer server = new UDPServer(args[0], Integer.parseInt(args[1]));
-		server.receiveFile();
+	{    
+		UDPServer server = new UDPServer(15200);
+		
+//		while (true)
+			server.receiveFile();
 	}
 }
